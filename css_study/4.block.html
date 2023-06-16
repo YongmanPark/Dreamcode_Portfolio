@@ -5,7 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Block vs Inline vs Inline-Block</title>
-    <style></style>
+    <style>
+      p, span {
+        background-color: antiquewhite;
+      }
+      p {
+        display: inline;
+      }
+      span {
+        display: block;
+      }
+      .inlineBlock {
+        display: inline-block;
+      }
+    </style>
   </head>
   <body>
     <p>기본적인 블럭 요소인 p</p>

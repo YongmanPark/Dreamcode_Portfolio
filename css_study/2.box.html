@@ -6,12 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Box Model</title>
     <style>
+    /*https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing*/
       div {
         width: 100px;
         height: 100px;
         margin-bottom: 10px;
         background-color: chocolate;
       }
+      .box1, .box3 {
+        padding: 20px;
+        border: 5px solid black;
+      }
+      /* 내가 정한 박스 사이즈에 보더를 포함하고 싶을때
+      ,유지보수가 더 쉽다
+      */
+      .box1 {
+        box-sizing: border-box;
+      }
+      /* 설정 안한 일반적인 경우 컨텐츠 박스*/
+      .box3 {
+        box-sizing: content-box;
+      }
+      
     </style>
   </head>
   <body>
