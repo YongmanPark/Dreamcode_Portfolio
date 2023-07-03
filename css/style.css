@@ -76,13 +76,19 @@ button:focus{
 .header{
     position: fixed;
     top: 0;
-    background-color: #050a13;
+    background-color: transparent;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    z-index: 1g;
+    z-index: 1;
+    transition: all 500ms ease;
+}
+
+.header--dark{
+    background-color: var(--color-primary);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
 }
 
 .header_logo{
