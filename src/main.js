@@ -7,12 +7,22 @@ document.addEventListener('scroll', () => {
     } else {
         header.classList.remove("header--dark");
     }
-})
+});
 
 // When home section is changed by scroll then change opacity
 const home = document.querySelector(".home_container");
 const homeHeight = home.offsetHeight;
 document.addEventListener("scroll", ()=>{
-    console.log(1 - window.scrollY / homeHeight);
     home.style.opacity = 1 - window.scrollY / homeHeight;
-})
+});
+
+// Arrow and opacity related
+const arrow = document.querySelector('.arrow_container');
+document.addEventListener("scroll", ()=>{
+    //arrow.style.opacity = 0 + window.scrollY / homeHeight;
+    if(window.scrollY > homeHeight / 2){
+        arrow.style.opacity = 1; 
+    } else {
+        arrow.style.opacity = 0; 
+    }
+});
