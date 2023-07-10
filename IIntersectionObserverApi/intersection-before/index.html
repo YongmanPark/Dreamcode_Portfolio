@@ -45,6 +45,27 @@
     <div class="box">19</div>
     <div class="box">20</div>
 
-    <script></script>
+    <script>
+      const options = {
+        rootMargin: '-200px',
+        threshold: [0, 0.25, 0.5]
+      }
+      const observer = new IntersectionObserver(callback, options);
+      const boxes = document.querySelectorAll('.box');
+      boxes.forEach(box=>{
+        observer.observe(box)
+      });
+      function callback(entries){
+        entries.forEach(entry=>{
+          if(entry.isIntersecting){
+            entry.target.classList.add('active'); 
+          } else {
+            entry.target.classList.remove('active'); 
+          }
+          console.log(entry);
+          console.log(entry.target);
+        });
+      }
+    </script>
   </body>
 </html>
