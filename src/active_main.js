@@ -35,7 +35,7 @@ const sectionIds = [
       selectLastOne =
         index === sectionIds.length - 1 &&
         entry.isIntersecting &&
-        entry.intersectionRatio >= 0.95;
+        entry.intersectionRatio >= 0.  95;
     });
     console.log(visibleSections);
     console.log('무조건 라스트 섹션!!', selectLastOne);
